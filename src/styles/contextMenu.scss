@@ -1,0 +1,53 @@
+.context-menu {
+	position: absolute;
+	white-space: nowrap;
+	width: 12.5rem;
+	background-color: rgba(0, 0, 0, 0.75);
+	backdrop-filter: blur(50px);
+	border-radius: 5px;
+	overflow: hidden;
+	color: white;
+	--padding: 7px 6.5px;
+
+	.head {
+		display: flex;
+		align-items: center;
+		gap: 0.2rem;
+		padding: var(--padding);
+
+		.context-head-icon {
+			width: 2rem;
+			aspect-ratio: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 3px;
+		}
+	}
+
+	.context-separator {
+		height: 1px;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		padding: var(--padding);
+
+		li {
+			background-color: rgba(255, 255, 255, 0);
+			transition: ease 0.15s background-color;
+			padding: 0.25rem 0.15rem;
+			border-radius: 3px;
+			height: 2rem;
+
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.05);
+			}
+		}
+	}
+}
